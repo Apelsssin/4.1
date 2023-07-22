@@ -14,7 +14,7 @@ int main()
     std::cout << std::endl;
 
     std::cout << "Выходные данные: ";
-    std::for_each(V.begin(), V.end(), [](int &n) { //});
+    std::for_each(V.begin(), V.end(), [](int &n) { 
             if (n % 2 != 0)
                 n = n * 3;
             std::cout << n << " ";
