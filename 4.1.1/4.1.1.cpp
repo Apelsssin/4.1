@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <vector>
+#include <algorithm>
 
 int main()
 {
@@ -13,12 +14,9 @@ int main()
     std::cout << std::endl;
 
     std::cout << "Выходные данные: ";
-    [&V]() {
-        for (int& it : V) {
-            if (it % 2 != 0)
-                it = it * 3;
-            std::cout << it << " ";
-        }
-        std::cout << std::endl;
-    }();
+    std::for_each(V.begin(), V.end(), [](int &n) { //});
+            if (n % 2 != 0)
+                n = n * 3;
+            std::cout << n << " ";
+    });
 }
